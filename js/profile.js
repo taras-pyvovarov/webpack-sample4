@@ -1,18 +1,15 @@
-(function(){
-  var user = {
-    name : "Shekhar Gulati",
-    messages : [
-      "hello",
-      "bye",
-      "good night"
-    ]
-  };
+//CommonJS imported dependencies
+var timeline = require('./timeline.js');
 
-  $("#timeline").text(user.name+ " Timeline");
+var user = {
+  name : "Shekhar Gulati",
+  messages : [
+    "hello",
+    "bye",
+    "good night"
+  ]
+};
 
-  _.each(user.messages, function(msg){
-    var html = "<li><div class='timeline-heading'><h4 class='timeline-title'>"+msg+"</h4></div></li>";
-    $(".timeline").append(html);
-  });
-
-}());
+var timelineModule = new timeline(user);
+timelineModule.setHeader(user);
+timelineModule.setTimeline(user);

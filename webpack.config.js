@@ -11,12 +11,11 @@ module.exports = {
     },
 
     module: {
-        loaders: [
-            {
-                test: /\.css$/,
-                //Here first apply css loader to convert text file to css, then style loader to apply for page
-                loader: 'style-loader!css-loader!'
-            }
-        ]
-    }
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
 }

@@ -1,6 +1,6 @@
 //CommonJS imported dependencies
 var timeline = require('./timeline.js');
-var ssssssss = require('../css/style.css');
+require('../css/style.css');
 
 var user = {
   name : "Shekhar Gulati",

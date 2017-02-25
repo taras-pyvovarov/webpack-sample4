@@ -1,4 +1,6 @@
 //CommonJS imported dependencies
+var cssPath = '../css/style.css';
+require(cssPath);
 var timeline = require('./timeline.js');
 
 var user = {
@@ -10,6 +12,7 @@ var user = {
   ]
 };
 
+//debugger;
 var timelineModule = new timeline(user);
 timelineModule.setHeader(user);
 timelineModule.setTimeline(user);
